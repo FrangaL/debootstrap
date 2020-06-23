@@ -10,7 +10,7 @@ versionToInt() {
 
 # Instalador debootstrap
 DEBOOTSTRAP_ACT="$(debootstrap --version | grep -o '[0-9.]\+' | head -1)"
-DEBOOTSTRAP_VER=$(versionToInt ${DEBOOTSTRAP_ACT##*[!0-9.]})
+DEBOOTSTRAP_VER=$(versionToInt ${DEBOOTSTRAP_ACT})
 DEBOOTSTRAP_REQ=$(versionToInt 1.0.124)
 
 if [ ${DEBOOTSTRAP_VER} \< ${DEBOOTSTRAP_REQ} ] ; then
