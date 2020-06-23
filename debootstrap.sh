@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Github raw url
+if [ -z "$RAWGIT" ]; then
+RAWGIT="https://raw.githubusercontent.com/FrangaL"
+fi
+
 # Funcion de cambio de Nº version a Nº integro
 versionToInt() {
   local IFS=.
